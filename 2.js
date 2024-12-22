@@ -2,7 +2,7 @@ function getProductAttributes() {
   const attributes = {};
 
   const names = document.querySelectorAll(
-    "#tab1 > div.tab-pane-product-desc-main > div.tab-pane-product-desc-parameters > div:nth-child(1) > ul > li"
+    ".tab-pane-product-parameters-block > ul > li"
   );
 
   names.forEach((name) => {
