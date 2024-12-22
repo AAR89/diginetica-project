@@ -4,7 +4,6 @@ function getProductAttributes() {
   const names = document.querySelectorAll(
     "#tab1 > div.tab-pane-product-desc-main > div.tab-pane-product-desc-parameters > div:nth-child(1) > ul > li"
   );
-  console.log(names);
 
   names.forEach((name) => {
     let attributeName = name.querySelector(`div.parameter-name`);
@@ -15,17 +14,11 @@ function getProductAttributes() {
 
     const attributeValue = name.querySelector(`div.parameter-value`);
 
-    console.log(
-      "attributeName: ",
-      attributeName.textContent.trim(),
-      "attributeValue: ",
-      attributeValue.textContent.trim()
-    );
-
-    // attributes[attributeName] = attributeValue;
+    attributes[attributeName.textContent.trim()] =
+      attributeValue.textContent.trim();
   });
 
-  //   console.log(attributes);
+  console.log(attributes);
   return attributes;
 }
 
